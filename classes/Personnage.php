@@ -1,20 +1,25 @@
 <?php
 
-class Personnage
+abstract class Personnage implements Combat
 {
-    public $nom;
-    public $vie = 100;
-    public $attaque;
-    public $taille;
-    public $masse;
-    public $race;
+    protected $nom;
+    protected $vie = 100;
+    protected $attaque;
+    protected $taille;
+    protected $masse;
+    protected $race;
 
-    public function marcher() : string
+    public function resultatCombat($a, $b)
+    {
+        return "$a a vaincu $b";
+    }
+
+    protected function marcher(): string
     {
         return "Je marche !";
     }
 
-    public function recupererPointDeVie() : int
+    protected function recupererPointDeVie(): int
     {
         return $this->vie;
     }
