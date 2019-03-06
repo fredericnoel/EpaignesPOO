@@ -6,6 +6,7 @@ spl_autoload_register('classAutoLoader');
 
 $merlin = new Magicien("Macron");
 
-Log::logWrite("Coucou");
+$merlin->unnomdemethodealacon();
+
 
 var_dump($merlin);
